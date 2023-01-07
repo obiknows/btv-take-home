@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "/awesomePath": {
+      "lambdaFunction": "AwesomeAPIGatewayRestResolver",
+      "name": "/awesomePath",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  },
+  "version": 1
+}

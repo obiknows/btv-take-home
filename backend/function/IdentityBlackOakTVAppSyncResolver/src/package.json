@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "blackoaktv"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "uuid": "^9.0.0"
+  },
+  "description": "resolve GraphQL API for Video related schema",
+  "devDependencies": {
+    "aws-sdk": "^2.1210.0",
+    "aws-sdk-mock": "^5.7.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "video-graphql-resolver",
+  "private": true,
+  "scripts": {
+    "pretest": "npm i --quiet",
+    "test": "mocha lib/*.spec.js"
+  },
+  "version": "1.0.0"
+}
