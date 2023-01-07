@@ -16,6 +16,8 @@ Naturally, we would like to see your creativity and what you can come up with, b
 - A minimal Sign up and sign in experience to properly demo this.
 
 How far you want to take this is completely up to you, so shine!
+#### Submission
+I recommend forking this and submissions should be made as a PR against this branch.
 
 ## Technologies
 - **Client**: NextJS for the web app
