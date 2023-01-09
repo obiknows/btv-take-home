@@ -2,10 +2,10 @@
 
 This is a simple NextJS TS App with backend. Your task will be to first get a good grasp on this skeleton and then build on top of it.
 
-You will given 3-5 days to complete the task after which there will be a sitdown to discuss implementation and design decisions. Only client side would be expected. The project is not expected to be fully functional at the time of turn in.
+You will given 3-5 days to complete the task after which there will be a sitdown to discuss implementation and design decisions. The project is not expected to be fully functional at the time of turn in, but see requirements below.
 
 ## Task
-BlackOakTV is looking to grow its subscriber base by adding a virality feature. We will now allow users to generate referral tokens or links. For every new subscriber using the token or link, we will give a 25% discount towards the new user and also pay out $5 to the referring user.
+BlackOakTV is looking to grow its subscriber base by adding a virality feature. We will now allow users to generate referral tokens or links. For every new subscriber that uses the token or link, they will receive a 25% discount towards the new user signup while the referring user will receive a pay out $5.
 
 You are required to architect and build a referral system, where authenticated users can create a token or generate a link that can be shared with friends and family.
 
@@ -15,7 +15,7 @@ Naturally, we would like to see your creativity and what you can come up with, b
 - UI Page to claim referral using link or entering token directly
 - A minimal Sign up and sign in experience to properly demo this.
 
-How far you want to take this is completely up to you, so shine!
+The further you take this, the better!
 #### Submission
 I recommend forking this and submissions should be made as a PR against this branch.
 
@@ -44,8 +44,10 @@ I recommend forking this and submissions should be made as a PR against this bra
     - **/customQueries** - shows some precendence on how to write custom graphql queries as you see fit while you're building.
 
 ## Hint Hint
+- No need to build a complex auth system here, you can build something rather static in its logic.
+- GraphQL types automatically create dynamoDB tables.
 - You should be adding or extending the existing GraphQL and/or Rest APIs to best achieve your implementation
 - You should be touching existing or adding new Lambda(s) implementation to cover above
-- Client side UI needs to be developed
+- A couple of client side UIs needs to be developed
 - When we meet to discuss the implementation, we will also be adding a new feature in real time.
 
