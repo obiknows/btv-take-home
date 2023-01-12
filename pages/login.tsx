@@ -14,12 +14,12 @@ const LogInPage: NextPage = () => (
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
             alt="logo"
           />
-          Flowbite
+          BlackOak
         </a>
         <div className="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
-              Create and account
+              LOGIN
             </h1>
             <form className="space-y-4 md:space-y-6" action="#">
               <div>
@@ -30,7 +30,7 @@ const LogInPage: NextPage = () => (
                   type="email"
                   name="email"
                   id="email"
-                  className=" border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className=" border  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="name@company.com"
                 />
               </div>
@@ -55,7 +55,7 @@ const LogInPage: NextPage = () => (
                   name="confirm-password"
                   id="confirm-password"
                   placeholder="••••••••"
-                  className="border  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
               <div className="flex items-start">
@@ -64,11 +64,11 @@ const LogInPage: NextPage = () => (
                     id="terms"
                     aria-describedby="terms"
                     type="checkbox"
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800"
+                    className="w-4 h-4 borderrounded  focus:ring-3 focus:ring-primary-300 bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800"
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label className="font-light text-gray-500 text-gray-300">
+                  <label className="font-light text-gray-300">
                     I accept the{" "}
                     <a
                       className="font-medium text-primary-600 hover:underline text-primary-500"

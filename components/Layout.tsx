@@ -15,7 +15,7 @@ const Layout = ({ children, title = "BlackOakTV" }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     {/*  */}
-    <body className="bg-slate-900 min-h-[75rem] w-screen">
+    <body className="bg-slate-900 min-h-screen w-screen">
       {/* Header */}
       <header className="sticky top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
         <nav
