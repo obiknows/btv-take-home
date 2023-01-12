@@ -16,7 +16,7 @@ const ShareReferralPage: NextPage = () => (
               <span className="font-bold">$450 in Amazon Gift Cards</span> when
               your referrals shop for insurance.
             </p>
-
+            {/* 
             <div className="mt-8">
               <h2 className="text-lg font-semibold  text-gray-200">
                 What can I expect?
@@ -78,9 +78,9 @@ const ShareReferralPage: NextPage = () => (
                   <span className=" text-gray-400">Simple and affordable</span>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <h2 className="text-lg font-semibold  text-gray-200">
                 Enjoyed by:
               </h2>
@@ -224,7 +224,7 @@ const ShareReferralPage: NextPage = () => (
                   />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             <div className="mt-10 flex items-center gap-x-5">
               <div className="flex -space-x-2">
@@ -257,7 +257,7 @@ const ShareReferralPage: NextPage = () => (
                 </span>
               </div>
               <span className="text-sm text-gray-500">
-                Trusted by over 37k customer
+                Used by over 37k viewers
               </span>
             </div>
           </div>
@@ -265,7 +265,7 @@ const ShareReferralPage: NextPage = () => (
           <div className="relative">
             <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 border-gray-700">
               <h2 className="text-xl font-semibold  text-gray-200">
-                Fill in the form
+                Enter your email to get your referral link:
               </h2>
 
               <form>
@@ -347,43 +347,21 @@ const ShareReferralPage: NextPage = () => (
                   </div> */}
                 </div>
 
-                <div className="mt-3 flex">
-                  <div className="flex">
-                    <input
-                      id="remember-me"
-                      name="remember-me"
-                      type="checkbox"
-                      className="shrink-0 mt-1.5  rounded text-blue-600 pointer-events-none focus:ring-blue-500 bg-gray-800 border-gray-700 checked:bg-blue-500 checked:border-blue-500 focus:ring-offset-gray-800"
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <label className="text-sm  text-gray-400">
-                      By submitting this form I have read and acknowledged the{" "}
-                      <a
-                        className="text-blue-600 decoration-2 hover:underline font-medium"
-                        href="#"
-                      >
-                        Privact policy
-                      </a>
-                    </label>
-                  </div>
-                </div>
-
                 <div className="mt-6 grid">
                   <button
                     type="submit"
                     className="inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2  focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 focus:ring-offset-gray-800"
                   >
-                    Send inquiry
+                    Enter
                   </button>
                 </div>
               </form>
 
-              <div className="mt-3 text-center">
+              {/* <div className="mt-3 text-center">
                 <p className="text-sm text-gray-500">
                   We'll get back to you in 1-2 business days.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
