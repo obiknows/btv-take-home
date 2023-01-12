@@ -19,7 +19,7 @@ const WatchPage: NextPage = () => (
             </p>
             <div className="mt-5 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
               <a
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 focus:ring-offset-gray-800"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition py-3 px-4 focus:ring-offset-gray-800"
                 href="https://github.com/htmlstreamofficial/preline/tree/main/examples"
                 target="_blank"
               >
@@ -36,7 +36,7 @@ const WatchPage: NextPage = () => (
                 Get the source code
               </a>
               <a
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold text-blue-500 hover:text-blue-700 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm py-3 px-4 ring-offset-slate-900"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold text-blue-500 hover:text-blue-700 focus:outline-none focus:ring-2  focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm py-3 px-4 ring-offset-slate-900"
                 href="../../examples.html"
               >
                 <svg
