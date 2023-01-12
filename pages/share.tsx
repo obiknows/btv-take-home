@@ -25,6 +25,17 @@ const ShareReferralPage: NextPage = () => (
               </h2>
 
               <form>
+                <div className="mt-6">
+                  <label className="block text-sm  font-medium text-white">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="hs-work-email-hire-us-1"
+                    id="hs-work-email-hire-us-1"
+                    className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
+                  />
+                </div>
                 <div className="mt-6 grid gap-4 lg:gap-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                     <div>
@@ -41,66 +52,16 @@ const ShareReferralPage: NextPage = () => (
 
                     <div>
                       <label className="block text-sm  font-medium text-white">
-                        Last Name
+                        Date of Birth
                       </label>
                       <input
-                        type="text"
+                        type="date"
                         name="hs-lastname-hire-us-1"
                         id="hs-lastname-hire-us-1"
                         className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
                       />
                     </div>
                   </div>
-
-                  <div>
-                    <label className="block text-sm  font-medium text-white">
-                      Work Email
-                    </label>
-                    <input
-                      type="email"
-                      name="hs-work-email-hire-us-1"
-                      id="hs-work-email-hire-us-1"
-                      className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
-                    />
-                  </div>
-
-                  {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                    <div>
-                      <label className="block text-sm  font-medium text-white">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        name="hs-company-hire-us-1"
-                        id="hs-company-hire-us-1"
-                        className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm  font-medium text-white">
-                        Company Website
-                      </label>
-                      <input
-                        type="text"
-                        name="hs-company-website-hire-us-1"
-                        id="hs-company-website-hire-us-1"
-                        className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
-                      />
-                    </div>
-                  </div> */}
-
-                  {/* <div>
-                    <label className="block text-sm  font-medium text-white">
-                      Details
-                    </label>
-                    <textarea
-                      id="hs-about-hire-us-1"
-                      name="hs-about-hire-us-1"
-                      rows={4}
-                      className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400"
-                    ></textarea>
-                  </div> */}
                 </div>
 
                 <div className="mt-6 grid">
@@ -113,11 +74,12 @@ const ShareReferralPage: NextPage = () => (
                 </div>
               </form>
 
-              {/* <div className="mt-3 text-center">
+              <div className="mt-3 text-center">
                 <p className="text-sm text-gray-500">
-                  We'll get back to you in 1-2 business days.
+                  You have to be at least 18 years of age to participate in the
+                  referral program
                 </p>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
