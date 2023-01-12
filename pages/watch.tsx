@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Layout from "../components/Layout";
 
-const IndexPage: NextPage = () => (
+const WatchPage: NextPage = () => (
   <Layout title="Home | Black Oak TV">
     <div className="w-full h-full bg-green-500">
-      {/* <main id="content" role="main">
+      <main id="content" role="main">
         <div className="max-w-[85rem] mx-auto pt-12 pb-10  md:pt-24 text-white">
           <header className="max-w-3xl">
             <p className="mb-2 text-sm font-semibold text-blue-600">
@@ -58,9 +58,9 @@ const IndexPage: NextPage = () => (
             </div>
           </header>
         </div>
-      </main> */}
+      </main>
     </div>
   </Layout>
 );
 
-export default IndexPage;
+export default WatchPage;

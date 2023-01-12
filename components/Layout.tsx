@@ -10,9 +10,8 @@ type Props = {
 const Layout = ({ children, title = "BlackOakTV" }: Props) => {
   const links = [
     { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
-    { id: 1, name: "Watch", url: "/share" },
-    { id: 1, name: "Stream", url: "/share", isNew: true },
-    { id: 1, name: "Refer", url: "/share" },
+    { id: 1, name: "Watch", url: "/watch" },
+    { id: 1, name: "Stream", url: "/stream", isNew: true },
   ];
 
   return (
@@ -33,7 +32,7 @@ const Layout = ({ children, title = "BlackOakTV" }: Props) => {
             <div className="flex items-center justify-between">
               <a
                 className="flex-none text-xl font-semibold text-white"
-                href="#"
+                href="/"
                 aria-label="Brand"
               >
                 BlackOakTV
@@ -92,7 +91,8 @@ const Layout = ({ children, title = "BlackOakTV" }: Props) => {
                   </a>
                 ))}
 
-                <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
+                {/* Dropdown Menu */}
+                {/* <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
                   <button
                     type="button"
                     className="flex items-center w-full  font-medium text-gray-400 hover:text-gray-500 "
@@ -180,11 +180,17 @@ const Layout = ({ children, title = "BlackOakTV" }: Props) => {
                       Team Account
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <a
+                  className="flex items-center font-medium  text-gray-400"
+                  href="/signup"
+                >
+                  Sign Up
+                </a>
+                <a
                   className="flex items-center gap-x-2 font-medium  md:border-l md:border-gray-300 md:my-6 md:pl-6 border-gray-700 text-gray-400 hover:text-blue-500"
-                  href="#"
+                  href="/login"
                 >
                   <svg
                     className="w-4 h-4"

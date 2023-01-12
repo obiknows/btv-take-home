@@ -14,7 +14,7 @@ const ShareReferralPage: NextPage = () => (
             <p className="mt-1 md:text-xl  text-gray-200">
               Earn up to{" "}
               <span className="font-bold">$450 in Amazon Gift Cards</span> when
-              your referrals shop for insurance.
+              your referrals sign for a subscription.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ const ShareReferralPage: NextPage = () => (
                 Enter your email to get your referral link:
               </h2>
 
-              <form>
+              <form method="post" action="/share/signup">
                 <div className="mt-6">
                   <label className="block text-sm  font-medium text-white">
                     Email
