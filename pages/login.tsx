@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
+import { signIn } from "next-auth/react";
 
-const LogInPage: NextPage = () => (
+const LogInPage = () => (
   <Layout title="Sign Up | Black Oak TV">
     <section className="bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -80,7 +81,7 @@ const LogInPage: NextPage = () => (
                 </div>
               </div>
               <button
-                type="submit"
+                onClick={() => signIn("credentials")}
                 className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
               >
                 Create an account

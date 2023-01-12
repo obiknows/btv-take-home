@@ -1,0 +1,160 @@
+type Account {
+  id: ID
+  type: String
+  provider: String @search(by: [hash])
+  providerAccountId: String @search(by: [hash])
+  refreshToken: String
+  expires_at: Int64
+  accessToken: String
+  token_type: String
+  refresh_token: String
+  access_token: String
+  scope: String
+  id_token: String
+  session_state: String
+  user: User @hasInverse(field: "accounts")
+}
+type Session {
+  id: ID
+  expires: DateTime
+  sessionToken: String @search(by: [hash])
+  user: User @hasInverse(field: "sessions")
+}
+type User {
+  id: ID
+  name: String
+  email: String @search(by: [hash])
+  emailVerified: DateTime
+  image: String
+  accounts: [Account] @hasInverse(field: "user")
+  sessions: [Session] @hasInverse(field: "user")
+}
+
+type VerificationToken {
+  id: ID
+  identifier: String @search(by: [hash])
+  token: String @search(by: [hash])
+  expires: DateTime
+}
+
+#
+
+enum BillingServiceProvider {
+  STRIPE
+  GOOGLE
+  APPLE
+  PAYPAL
+  ROKU
+  AMAZON
+}
+
+# enum PreviewCategory {
+#   SHOW # Image will appear as a thumbnail in Catalog 1480 x 840px
+#   VIDEO # Image will appear for a video as a thumbnail in a collection and on the video player page. 1920 x 1080px
+#   CATALOG_VIDEO # Image will appear for a video as a thumbnail in Catalog 1480 x 840px
+#   FEATURED_CATEGORY_VIDEO # Image will appear for a video in a feature category carousel. 1900 x 800px
+#   AUTHOR # Image for authors
+#   SUB # Image for subscription plans
+#   STRONG_LEAD
+#   ALL_CAST
+#   ABSTRACT
+#   FRAME_SHOT
+#   FEATURED_CATEGORY_SHOW # Image will appear for the collection in a feature category carousel on the catalog page 1900px x 800px
+# }
+
+# enum PreviewDimension {
+#   LANDSCAPE # 16:9 dimension image
+#   PORTRAIT # 9:16 dimension image
+#   CUSTOM_SQUARE # 1:1 dimension image
+#   CUSTOM_TOP_10 # 16:4.5 dimension image
+# }
+
+# enum PreviewTitlePreference {
+#   WITH_TITLE # previews that have title in them
+#   WITHOUT_TITLE # previews without titles in them
+# }
+
+enum SubscriptionPlanStatus {
+  CANCELLED
+  EXPIRED
+  ACTIVE
+  PENDING
+  FAILED
+  UNKNOWN
+}
+
+input CreateBlackOakTVUserInput {
+  id: ID!
+  fullname: String!
+  email: String!
+  defaultProfile: ID!
+  createdAt: String!
+  lastUpdate: String
+}
+
+input UpdateBlackOakTVUserInput {
+  id: ID!
+  lastUpdate: String!
+  fullname: String
+  email: String
+  defaultProfile: ID
+}
+
+# type Mutation {
+#   createBlackOakTVUser(input: CreateBlackOakTVUserInput): BlackOakTVUser
+#     @function(name: "IdentityBlackOakTVAppSyncResolver-${env}")
+#   updateBlackOakTVUser(input: UpdateBlackOakTVUserInput): BlackOakTVUser
+#     @function(name: "IdentityBlackOakTVAppSyncResolver-${env}")
+# }
+
+# type Query {
+#   getBlackOakTVUser(id: ID!): BlackOakTVUser
+#     @function(name: "IdentityBlackOakTVAppSyncResolver-${env}")
+#   getBlackOakTVUserPlan(id: ID!, email: String): BlackOakTVUserSubscription
+#     @function(name: "ContentAccessGatekeeperAppSyncResolver-${env}")
+# }
+
+# type Subscription {
+#   onNewUserCreationComplete(userEmail: String!): BlackOakTVUserProfile
+#     @aws_subscribe(mutations: ["createBlackOakTVUserProfile"])
+# }
+
+type BlackOakTVUser {
+  id: ID!
+  fullname: String!
+  email: String!
+  defaultProfileID: ID!
+  createdAt: String!
+  lastUpdate: String!
+  profile: BlackOakTVUserProfile
+}
+
+type BlackOakTVUserProfile {
+  id: ID!
+  name: String!
+  userID: ID!
+  userEmail: String!
+  profilePic: Preview
+  boxArtPreference: [PreviewCategory]
+}
+
+# type BlackOakTVUserSubscription {
+#   id: ID! # uuid for the entry
+#   userID: ID! # a user's blackoaktv id
+#   planID: ID! # id of the plan they're running
+#   customerID: ID! # id of the user on their payment platform
+#   provider: BillingServiceProvider! # provider user pays through
+#   hasHadTrial: Boolean! # if the user has had a previous trial
+#   status: SubscriptionPlanStatus! # status of the subscription
+#   nextPaymentDate: String! # next payment date for the customer.
+#   trialing: Boolean # whether or not a user is on trial
+# }
+
+# type Preview {
+#   id: ID!
+#   url: String!
+#   previewOwner: String
+#   previewCategory: String
+#   previewDimension: PreviewDimension
+#   titlePreference: PreviewTitlePreference
+# }

@@ -24,7 +24,7 @@ const ShareReferralPage: NextPage = () => (
                 Enter your email to get your referral link:
               </h2>
 
-              <form method="post" action="/share/signup">
+              <form method="post" action="/share/confirm">
                 <div className="mt-6">
                   <label className="block text-sm  font-medium text-white">
                     Email

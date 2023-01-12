@@ -11,8 +11,8 @@ type Props = {
 const Layout = ({ children, title = "BlackOakTV" }: Props) => {
   const links = [
     { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
-    { id: 1, name: "Watch", url: "/watch" },
-    { id: 1, name: "Stream", url: "/stream", isNew: true },
+    { id: 2, name: "Watch", url: "/watch" },
+    { id: 3, name: "Stream", url: "/stream", isNew: true },
   ];
 
   return (
