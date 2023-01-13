@@ -50,7 +50,7 @@ const HomeHero = () => {
   };
 
   return (
-    <section className="w-full h-full text-white">
+    <section className="w-full h-full text-white mb-40">
       <div className="max-w-[85rem] mx-auto">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
