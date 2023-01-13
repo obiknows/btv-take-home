@@ -8,7 +8,7 @@ type Props = {
   title?: string;
 };
 
-const WatchLayout = ({ children, title = "BlackOakTV" }: Props) => {
+const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
   const links = [
     { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
     { id: 2, name: "Watch", url: "/watch" },
@@ -23,7 +23,7 @@ const WatchLayout = ({ children, title = "BlackOakTV" }: Props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       {/*  */}
-      <body className="bg-slate-900 min-h-screen w-screen">
+      <section className="bg-slate-900 min-h-screen w-screen">
         <div className="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden dark:bg-gray-800 dark:border-gray-700">
           <div className="flex items-center py-4">
             <button
@@ -90,7 +90,7 @@ const WatchLayout = ({ children, title = "BlackOakTV" }: Props) => {
               href="#"
               aria-label="Brand"
             >
-              Brand
+              BlackOak
             </a>
           </div>
 
@@ -102,7 +102,7 @@ const WatchLayout = ({ children, title = "BlackOakTV" }: Props) => {
               <li>
                 <a
                   className="flex items-center gap-x-3 py-2 px-2.5 bg-gray-700 text-sm text-white rounded-md"
-                  href="javascript:;"
+                  href="/watch/home"
                 >
                   <svg
                     className="w-3.5 h-3.5"
@@ -536,9 +536,9 @@ const WatchLayout = ({ children, title = "BlackOakTV" }: Props) => {
         <div className="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72 text-white">
           {children}
         </div>
-      </body>
+      </section>
     </div>
   );
 };
 
-export default WatchLayout;
+export default WatchAndStreamLayout;

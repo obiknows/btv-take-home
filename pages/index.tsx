@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 
 const IndexPage: NextPage = () => {
   const { data: session } = useSession();
-  console.log("session", session);
 
   return (
     <Layout title="Home | Black Oak TV">
