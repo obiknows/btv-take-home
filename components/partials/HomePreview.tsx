@@ -23,7 +23,7 @@ const HomePreview = () => {
             <div className="absolute inset-0 w-full h-full">
               <div className="flex flex-col justify-center items-center w-full h-full">
                 <a
-                  className="inline-flex justify-center items-center gap-x-1.5 text-center text-sm  rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 bg-black text-gray-200 hover:text-gray-400 focus:ring-offset-black"
+                  className="inline-flex justify-center items-center gap-x-1.5 text-center text-sm  rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2  transition py-3 px-4 bg-black text-gray-200 hover:text-gray-400 focus:ring-offset-black"
                   href="#"
                 >
                   <svg
@@ -41,7 +41,7 @@ const HomePreview = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-12 -left-20 -z-[1] w-48 h-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg to-slate-900">
+            <div className="absolute bottom-12 -left-20 -z-[1] w-48 h-48 bg-gradient-to-b from-orange-500  p-px rounded-lg to-slate-900">
               <div className=" w-48 h-48 rounded-lg bg-slate-900"></div>
             </div>
 

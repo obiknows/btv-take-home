@@ -82,8 +82,9 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
 
         <div
           id="application-sidebar-dark"
-          className="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 left-0 bottom-0 z-[60] w-64 bg-gray-900 border-r border-gray-800 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0"
+          className="-translate-x-full transition-all duration-300 transform fixed top-0 left-0 bottom-0 z-[60] w-64 bg-gray-900 border-r border-gray-800 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 flex flex-col h-screen"
         >
+          {/* title */}
           <div className="px-6">
             <a
               className="flex-none text-xl font-semibold text-white"
@@ -94,6 +95,7 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
             </a>
           </div>
 
+          {/* menu */}
           <nav
             className="hs-accordion-group p-6 w-full flex flex-col flex-wrap"
             data-hs-accordion-always-open
@@ -218,38 +220,6 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
                           ></path>
                         </svg>
                       </a>
-
-                      <div
-                        id="users-accordion-sub-1-child"
-                        className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-                      >
-                        <ul className="pt-2 pl-2">
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 3
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </li>
                     <li className="hs-accordion" id="users-accordion-sub-2">
                       <a
@@ -288,38 +258,6 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
                           ></path>
                         </svg>
                       </a>
-
-                      <div
-                        id="users-accordion-sub-2-child"
-                        className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
-                      >
-                        <ul className="pt-2 pl-2">
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 2
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                              href="javascript:;"
-                            >
-                              Link 3
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </li>
                   </ul>
                 </div>
@@ -376,38 +314,6 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
                     ></path>
                   </svg>
                 </a>
-
-                <div
-                  id="account-accordion-child"
-                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-                >
-                  <ul className="pt-2 pl-2">
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 1
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 2
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 3
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </li>
 
               <li className="hs-accordion" id="projects-accordion">
@@ -462,34 +368,7 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
                 <div
                   id="projects-accordion-child"
                   className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-                >
-                  <ul className="pt-2 pl-2">
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 1
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 2
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-400 rounded-md hover:bg-gray-800 hover:text-white"
-                        href="javascript:;"
-                      >
-                        Link 3
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                ></div>
               </li>
 
               <li>
@@ -531,6 +410,9 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
               </li>
             </ul>
           </nav>
+
+          {/* settings  */}
+          <section className="w-full h-full  flex-1 bg-red-400">a</section>
         </div>
 
         <div className="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72 text-white">
