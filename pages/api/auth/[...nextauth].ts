@@ -1,10 +1,12 @@
 import NextAuth from "next-auth";
-import { DgraphAdapter } from "@next-auth/dgraph-adapter";
+import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+// import { DgraphAdapter } from "@next-auth/dgraph-adapter";
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-export default NextAuth({
+
+const options: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers
   // PROVIDERS
   providers: [
@@ -73,4 +75,6 @@ export default NextAuth({
   //   endpoint: process.env.DGRAPH_GRAPHQL_ENDPOINT,
   //   authToken: process.env.DGRAPH_GRAPHQL_KEY,
   // }),
-});
+};
+
+export default NextAuth(options);
