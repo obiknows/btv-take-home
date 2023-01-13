@@ -10,9 +10,9 @@ type Props = {
 const MarketingLayout = ({ children, title = "BlackOakTV" }: Props) => {
   const { data: session, status } = useSession();
   const links = [
-    { id: 1, name: "Refer", url: "/share" },
-    { id: 2, name: "Watch", url: "/watch" },
-    { id: 3, name: "Stream", url: "/stream", isNew: true },
+    { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
+    { id: 2, name: "Watch", url: "https://blackoak.tv/browse" },
+    { id: 3, name: "Stream", url: "/watch", isNew: true },
   ];
 
   return (

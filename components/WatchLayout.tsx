@@ -11,8 +11,8 @@ type Props = {
 const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
   const links = [
     { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
-    { id: 2, name: "Watch", url: "/watch" },
-    { id: 3, name: "Stream", url: "/stream", isNew: true },
+    { id: 2, name: "Watch", url: "https://blackoak.tv" },
+    { id: 3, name: "Stream", url: "/watch", isNew: true },
   ];
 
   return (
@@ -323,9 +323,6 @@ const WatchAndStreamLayout = ({ children, title = "BlackOakTV" }: Props) => {
               </li>
             </ul>
           </nav>
-
-          {/* settings  */}
-          <section className="w-full h-full  flex-1 bg-red-400">a</section>
         </div>
 
         <div className="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72 text-white">
