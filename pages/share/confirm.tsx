@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Marketing";
 
 const ReferralConfirmPage: NextPage = () => (
   <Layout title="Your Referral Link | Black Oak TV">

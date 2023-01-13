@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Layout from "../components/Layout";
+import Layout from "../components/Marketing";
 import { useSession } from "next-auth/react";
 
 const IndexPage: NextPage = () => {

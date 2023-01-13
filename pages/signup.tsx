@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Layout from "../components/Layout";
+import Layout from "../components/Marketing";
 
 const SignUpPage: NextPage = () => (
   <Layout title="Sign Up | Black Oak TV">

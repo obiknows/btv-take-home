@@ -7,7 +7,7 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children, title = "BlackOakTV" }: Props) => {
+const MarketingLayout = ({ children, title = "BlackOakTV" }: Props) => {
   const { data: session, status } = useSession();
   const links = [
     { id: 1, name: "Refer", url: "/share", isLoggedIn: true },
@@ -128,4 +128,4 @@ const Layout = ({ children, title = "BlackOakTV" }: Props) => {
   );
 };
 
-export default Layout;
+export default MarketingLayout;
