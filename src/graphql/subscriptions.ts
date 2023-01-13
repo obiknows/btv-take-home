@@ -8,6 +8,8 @@ export const onNewUserCreationComplete = /* GraphQL */ `
       name
       userID
       userEmail
+      referrer # points to the referalID of another user
+      referralId # users OWN referralID, some subset of
       profilePic {
         id
         url
