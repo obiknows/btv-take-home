@@ -89,6 +89,7 @@ input CreateBlackOakTVUserInput {
   email: String!
   # add new field for referrals
   referrer: ID
+  referralId: ID!
   defaultProfile: ID!
   createdAt: String!
   lastUpdate: String
@@ -126,6 +127,9 @@ type BlackOakTVUser {
   fullname: String!
   email: String!
   defaultProfileID: ID!
+  # add new field for referrals
+  referrer: ID
+  referralId: ID!
   createdAt: String!
   lastUpdate: String!
   profile: BlackOakTVUserProfile
