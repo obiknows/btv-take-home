@@ -87,18 +87,20 @@ input CreateBlackOakTVUserInput {
   id: ID!
   fullname: String!
   email: String!
+  # add new field for referrals
+  referrer: ID
   defaultProfile: ID!
   createdAt: String!
   lastUpdate: String
 }
 
-input UpdateBlackOakTVUserInput {
-  id: ID!
-  lastUpdate: String!
-  fullname: String
-  email: String
-  defaultProfile: ID
-}
+# input UpdateBlackOakTVUserInput {
+#   id: ID!
+#   lastUpdate: String!
+#   fullname: String
+#   email: String
+#   defaultProfile: ID
+# }
 
 # type Mutation {
 #   createBlackOakTVUser(input: CreateBlackOakTVUserInput): BlackOakTVUser
