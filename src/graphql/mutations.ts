@@ -10,6 +10,8 @@ export const createBlackOakTVUser = /* GraphQL */ `
       defaultProfileID
       createdAt
       lastUpdate
+      referrer # points to the referalID of another user
+      referralId # users OWN referralID, some subset of
       profile {
         id
         name
