@@ -46,21 +46,38 @@ input CreateBlackOakTVUserInput {
   id: ID!
   fullname: String!
   email: String!
-  # add new field for referrals
-  referrer: ID
   referralId: ID!
   defaultProfile: ID!
   createdAt: String!
   lastUpdate: String
 }
 
-# input UpdateBlackOakTVUserInput {
-#   id: ID!
-#   lastUpdate: String!
-#   fullname: String
-#   email: String
-#   defaultProfile: ID
-# }
+input CreateBlackOakTVUserReferralInput {
+  id: ID!
+  fullname: String!
+  email: String!
+  referralId: ID!
+  defaultProfile: ID!
+  createdAt: String!
+  lastUpdate: String
+}
+
+# only exists, per monetary transaction
+type Referral {
+  id: ID!
+  referralID: ID # referralID of referrer
+  referredUserId: ID! # user ID of the user who was referred
+  createdAt: String!
+}
+
+input UpdateBlackOakTVUserInput {
+  id: ID!
+  lastUpdate: String!
+  fullname: String
+  email: String
+  defaultProfile: ID
+  referralViewCount: Int
+}
 
 # type Mutation {
 #   createBlackOakTVUser(input: CreateBlackOakTVUserInput): BlackOakTVUser
@@ -68,12 +85,17 @@ input CreateBlackOakTVUserInput {
 #   updateBlackOakTVUser(input: UpdateBlackOakTVUserInput): BlackOakTVUser
 #     @function(name: "IdentityBlackOakTVAppSyncResolver-${env}")
 # }
+#   incrementBlackOakTVUserReferralCount(input: IncrementBlackOakTVUserReferralCountInput )
 
 # type Query {
 #   getBlackOakTVUser(id: ID!): BlackOakTVUser
 #     @function(name: "IdentityBlackOakTVAppSyncResolver-${env}")
 #   getBlackOakTVUserPlan(id: ID!, email: String): BlackOakTVUserSubscription
 #     @function(name: "ContentAccessGatekeeperAppSyncResolver-${env}")
+# getNumOfReferralLinkClikc(userId: ID!): BlackOakTV
+#     @function(name: "GetNumOfReferral-${env}")
+# getNumOfReferralsPerUser(referralId: ID!): Int
+#     @function(name: "GetNumOfReferral-${env}")
 # }
 
 # type Subscription {
@@ -92,6 +114,7 @@ type BlackOakTVUser {
   createdAt: String!
   lastUpdate: String!
   profile: BlackOakTVUserProfile
+  referralViewCount: Int!
 }
 
 type BlackOakTVUserProfile {

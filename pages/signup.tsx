@@ -1,4 +1,8 @@
-import type { NextPage } from "next";
+import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  NextPage,
+} from "next";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Layout from "../components/Marketing";
@@ -6,6 +10,14 @@ import Layout from "../components/Marketing";
 const SignUpPage: NextPage = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
+
+  console.log("router.query.refID:", router.query.refID);
+
+  if (router.query.refID) {
+    // we have a referral link visit
+    console.log("implement logic to fetch referral visits");
+    console.log("call Mutation to count referral visit");
+  }
 
   if (status == "authenticated") {
     return (
@@ -155,3 +167,11 @@ const SignUpPage: NextPage = () => {
 };
 
 export default SignUpPage;
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  return {
+    props: {
+      queryParams: context.query,
+    }, // will be passed to the page component as props
+  };
+}

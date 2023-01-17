@@ -1,11 +1,20 @@
-import type { NextPage } from "next";
+import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  NextPage,
+} from "next";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Marketing from "../../components/Marketing";
 
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { userAgent } from "next/server";
 
-const ShareReferralPage: NextPage = () => {
+const ShareReferralPage = ({ queryParams }) => {
   const { data: session, status } = useSession();
+
+  const router = useRouter();
 
   const ReferralForm = () => {
     if (status === "authenticated") {
@@ -22,7 +31,7 @@ const ShareReferralPage: NextPage = () => {
                   Copy And Share
                 </label>
                 <div className="py-3 px-4 block w-full  rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-800 border-gray-700 text-gray-400">
-                  https://share.blackoak.tv/admin
+                  http://localhost:3333/signup/?refID=referralID
                 </div>
               </div>
 
@@ -289,3 +298,21 @@ const ShareReferralPage: NextPage = () => {
   );
 };
 export default ShareReferralPage;
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  // for authed user, get user object -> get referralID
+  // if (auth'd) {
+  //   return {
+  //     props: {
+  //       queryParams: context.query,
+  //       // referralID: user.referralID
+  //     }, // will be passed to the page component as props
+  //   };
+  // }
+
+  return {
+    props: {
+      queryParams: context.query,
+    }, // will be passed to the page component as props
+  };
+}
